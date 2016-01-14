@@ -7,9 +7,9 @@ var express = require('express'),
     sequence = require('sequence').Sequence;
 
 var db = mysql.createConnection({
-    host: '159.203.0.212',
-    user: 'se3309project',
-    password: 'ClassTest6432',
+    host: '',
+    user: '',
+    password: '',
     database: 'se3309project'
 });
 

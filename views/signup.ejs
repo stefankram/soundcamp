@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Soundcamp Sign Up</title>
+        <!-- Stylesheets -->
+        <link href="lib/semantic/semantic.css" rel="stylesheet" type="text/css">
+        <link href="css/login.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper" class="ui middle aligned center aligned grid">
+            <div class="column" style="max-width: 500px;">
+                <h1 class="ui green header">Sign Up</h1>
+
+                <form class="ui large form" action="/signup" method="post">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="two fields">
+                                <div class="field">
+                                    <input type="text" name="firstname" placeholder="First Name">
+                                </div>
+                                <div class="field">
+                                    <input type="text" name="lastname" placeholder="Last Name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="username" placeholder="Username">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="email" placeholder="E-mail address">
+                        </div>
+                        <div class="field">
+                            <input type="password" name="password" placeholder="Password">
+                        </div>
+                        <div class="field">
+                            <textarea name="description" placeholder="Description..."></textarea>
+                        </div>
+                        <button class="ui fluid large green submit button">Sign Up</button>
+                    </div>
+                </form>
+
+                <div class="ui message">
+                    Have an account?&nbsp;&nbsp;
+                    <a href="/">Login</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="lib/jquery/jquery.js" type="text/javascript"></script>
+        <script src="lib/semantic/semantic.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Soundcamp Feed</title>
+        <!-- Stylesheets -->
+        <link href="lib/semantic/semantic.css" rel="stylesheet" type="text/css">
+        <link href="css/feed.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="ui top fixed secondary pointing menu">
+            <div class="ui container">
+                <a href="/" class="header item">Soundcamp</a>
+                <a href="/" class="active green item">Feed</a>
+                <a href="/search" class="item">Search</a>
+                <a href="/subscriptions" class="item">Subscriptions</a>
+                <a href="/account" class="item">Account</a>
+                <a href="/logout" class="item right">Log out</a>
+            </div>
+        </header>
+        <!-- Body -->
+        <div id="wrapper" class="ui container segment">
+            <div class="ui vertical segment">
+                <div class="ui divided items">
+                    <% for (var i = 0; i < songs.length; i++) { %>
+                        <div id="<%= songs[i].songId %>" class="item">
+                            <div class="image">
+                                <img src="<%= songs[i].image %>">
+                            </div>
+                            <div class="content">
+                                <span class="header"><%= songs[i].title %></span>
+                                <div class="meta">
+                                    <span><%= songs[i].username %></span>
+                                    <span> - </span>
+                                    <span><%= songs[i].createdAt %></span>
+                                </div>
+                                <div class="description">
+                                    <audio controls>
+                                        <source src="<%= songs[i].audio %>" type="audio/mpeg">
+                                        <source src="<%= songs[i].audio %>" type="audio/wav">
+                                    </audio>
+                                    <br>
+                                    <i>Description:</i><br>
+                                    <%= songs[i].description %>
+                                </div>
+                                <div class="extra">
+                                    <form class="ui form" action="/like" method="post">
+                                        <input type="hidden" name="songId" value="<%= songs[i].songId %>">
+                                        <div class="ui labeled button">
+                                            <button class="ui button">
+                                                <i class="heart icon"></i> Like
+                                            </button>
+                                            <span class="ui basic label"><%= songs[i].likes %></span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="ui comments">
+                                    <h3 class="ui dividing header">Comments</h3>
+                                    <% for (var j = 0; j < songs[i].comments.length; j++) { %>
+                                        <div class="comment">
+                                            <a class="avatar"><img src="<%= songs[i].comments[j].image %>"></a>
+                                            <div class="content">
+                                                <a class="author"><%= songs[i].comments[j].username %></a>
+                                                <div class="metadata">
+                                                    <span class="date"><%= songs[i].comments[j].createdAt %></span>
+                                                </div>
+                                                <div class="text"><%= songs[i].comments[j].comment %></div>
+                                                <% if (songs[i].comments[j].userId===userId) { %>
+                                                    <form class="ui form" action="/delete/comment" method="post">
+                                                        <input type="hidden" name="songId" value="<%= songs[i].songId %>">
+                                                        <input type="hidden" name="comment" value="<%= songs[i].comments[j].comment %>">
+                                                        <input type="hidden" name="createdAt" value="<%= songs[i].createdAt %>">
+                                                        <input class="delete-comment" type="submit" value="Delete Comment">
+                                                    </form>
+                                                <% } %>
+                                            </div>
+                                        </div>
+                                    <% } %>
+                                    <form class="ui reply form" action="/comment" method="post">
+                                        <input type="hidden" name="songId" value="<%= songs[i].songId %>">
+                                        <div class="field">
+                                            <textarea name="comment" placeholder="Write comment"></textarea>
+                                        </div>
+                                        <button class="ui green labeled submit icon button">
+                                            <i class="icon edit"></i>
+                                            Comment
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="lib/jquery/jquery.js" type="text/javascript"></script>
+        <script src="lib/semantic/semantic.js" type="text/javascript"></script>
+    </body>
+</html>

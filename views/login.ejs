@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Soundcamp Login</title>
+        <!-- Stylesheets -->
+        <link href="lib/semantic/semantic.css" rel="stylesheet" type="text/css">
+        <link href="css/login.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div id="wrapper" class="ui middle aligned center aligned grid">
+            <div class="column" style="max-width: 450px;">
+                <h1 class="ui green header">Soundcamp</h1>
+
+                <form class="ui large form" action="/login" method="post">
+                    <div class="ui stacked segment">
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="email" placeholder="E-mail address">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui left icon input">
+                                <i class="lock icon"></i>
+                                <input type="password" name="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <button class="ui fluid large green submit button">Login</button>
+                    </div>
+                </form>
+
+                <div class="ui message">
+                    Don't have an account?&nbsp;&nbsp;
+                    <a href="/signup">Sign Up</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="lib/jquery/jquery.js" type="text/javascript"></script>
+        <script src="lib/semantic/semantic.js" type="text/javascript"></script>
+    </body>
+</html>

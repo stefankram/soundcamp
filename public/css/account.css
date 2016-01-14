@@ -1,0 +1,7 @@
+body { background-color: #DDDDDD; }
+
+header { background-color: #FFFFFF !important; }
+
+#wrapper {
+    box-sizing: border-box;
+    padding-top: 57px; }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Standard Meta -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Soundcamp Search</title>
+        <!-- Stylesheets -->
+        <link href="lib/semantic/semantic.css" rel="stylesheet" type="text/css">
+        <link href="css/search.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="ui top fixed secondary pointing menu">
+            <div class="ui container">
+                <a href="/" class="header item">Soundcamp</a>
+                <a href="/" class="item">Feed</a>
+                <a href="/search" class="active green item">Search</a>
+                <a href="/subscriptions" class="item">Subscriptions</a>
+                <a href="/account" class="item">Account</a>
+                <a href="/logout" class="item right">Log out</a>
+            </div>
+        </header>
+        <!-- Body -->
+        <div id="wrapper" class="ui container">
+            <div class="ui segment">
+                <h3>Search for Users or Songs</h3>
+
+                <form class="ui large form" action="/search" method="post">
+                    <div class="fields">
+                        <div class="thirteen wide field">
+                            <input type="text" name="search" placeholder="Enter Query...">
+                        </div>
+                        <div class="two wide field">
+                            <button class="ui large green labeled submit icon button">
+                                <i class="icon search"></i>
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="ui segment">
+                <h3 class="ui dividing header">Results</h3>
+
+                <div class="ui relaxed divided list">
+                    <% if (results) { %>
+                        <% for (var i = 0; i < results.length; i++) { %>
+                            <div class="item">
+                                <img class="ui avatar image" src="<%= results[i].image %>">
+                                <div class="content">
+                                    <span class="header"><%= results[i].header %> - <%= results[i].type %></span>
+                                    <div class="description"><%= results[i].description %></div>
+                                </div>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

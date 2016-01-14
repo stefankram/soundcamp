@@ -1,0 +1,21 @@
+body { background-color: #DDDDDD; }
+
+header { background-color: #FFFFFF !important; }
+
+textarea { height: 20px !important; }
+
+#wrapper {
+    box-sizing: border-box;
+    padding-top: 34px; }
+
+div.green.divider { border-top-color: #21BA45 !important; }
+
+.delete-comment {
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 12px;
+    text-decoration: underline;
+    color: #6495ED;
+}

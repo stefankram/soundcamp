@@ -1,0 +1,20 @@
+{
+  "name": "soundcamp",
+  "version": "1.0.0",
+  "description": "A music collaboration platform that allows users to upload and comment on their friend's music.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Kramreither & Kirkland Landry",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "ejs": "^2.3.4",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "mysql": "^2.9.0",
+    "sequence": "^3.0.0"
+  }
+}

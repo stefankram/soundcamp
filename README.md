@@ -3,16 +3,16 @@ Soundcamp is a music collaboration platform that is designed to facilitate the c
 
 ### Examples of the web UI
 Login screen
-![alt text](https://github.com/stefankram/soundcamp/tree/master/images/img1.png "Login screen")
+![Login screen](https://raw.githubusercontent.com/stefankram/soundcamp/master/images/img1.png "Login screen")
 
 Main feed with songs from friends and bands
-![alt text](https://github.com/stefankram/soundcamp/tree/master/images/img2.png "Main feed with songs from friends and bands")
+![Main feed with songs from friends and bands](https://raw.githubusercontent.com/stefankram/soundcamp/master/images/img2.png "Main feed with songs from friends and bands")
 
 Search menu allowing users to find users and bands
-![alt text](https://github.com/stefankram/soundcamp/tree/master/images/img3.png "Search menu allowing users to find users and bands")
+![Search menu allowing users to find users and bands](https://raw.githubusercontent.com/stefankram/soundcamp/master/images/img3.png "Search menu allowing users to find users and bands")
 
 Subscriptions menu showing users/bands subscribed to
-![alt text](https://github.com/stefankram/soundcamp/tree/master/images/img4.png "Subscriptions menu showing users/bands subscribed to")
+![Subscriptions menu showing users/bands subscribed to](https://raw.githubusercontent.com/stefankram/soundcamp/master/images/img4.png "Subscriptions menu showing users/bands subscribed to")
 
 Account menu allowing user to update their account
-![alt text](https://github.com/stefankram/soundcamp/tree/master/images/img5.png "Account menu allowing user to update their account")
+![Account menu allowing user to update their account](https://raw.githubusercontent.com/stefankram/soundcamp/master/images/img5.png "Account menu allowing user to update their account")

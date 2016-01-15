@@ -1,7 +1,7 @@
 {
   "name": "soundcamp",
   "version": "1.0.0",
-  "description": "A music collaboration platform that allows users to upload and comment on their friend's music.",
+  "description": "A music collaboration platform that is designed to facilitate the creation, building, and distribution of music between users.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
